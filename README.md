@@ -1,24 +1,34 @@
 # Take It Right
 
-**A Deterministic Medication Safety Risk Analyzer with AI Explanation Layer**
+**A Deterministic Medication Safety Risk Analyzer with an AI Explanation Layer**
 
-Take It Right is a clinically structured medication safety engine designed to help users evaluate everyday dosing decisions using rule-based logic.
+Take It Right is a clinically structured medication safety engine designed to help users evaluate everyday dosing decisions using transparent, rule-based logic.
 
 It combines:
 
-* A **deterministic medical safety engine**
-* A **weight-based dosing validator**
-* A **risk scoring system**
-* A clean **interactive dashboard**
-* An optional **AI explanation layer** for human-friendly interpretation
+* A deterministic medical safety engine
+* A weight-based dosing validator
+* A structured risk scoring system
+* A clean interactive dashboard
+* An optional AI explanation layer for human-friendly interpretation
 
-The goal is clarity, safety, and structured reasoning — not guesswork.
+The system prioritizes clarity, explicit safety rules, and deterministic overrides — not probabilistic guesswork.
+
+---
+
+## 🔗 Live Demo
+
+Try the deployed application here:
+
+👉 **[https://your-render-url.onrender.com](https://your-render-url.onrender.com)**
+
+⚠️ Note: If hosted on a free tier, the backend may take a few seconds to wake up after inactivity.
 
 ---
 
 ## Why This Project Exists
 
-Many people hesitate to consult a doctor for minor medication questions and instead self-medicate. While common medicines like paracetamol are generally safe, misuse through:
+Many individuals hesitate to consult a doctor for minor medication questions and instead self-medicate. While common medicines such as paracetamol are generally safe, misuse through:
 
 * Overdosing
 * Alcohol combination
@@ -26,9 +36,9 @@ Many people hesitate to consult a doctor for minor medication questions and inst
 * Incorrect pediatric dosing
 * Unsafe stacking with NSAIDs
 
-can create real harm.
+can create serious health risks.
 
-Take It Right provides structured risk analysis using deterministic rules before any AI explanation is generated.
+Take It Right provides structured safety evaluation using deterministic medical logic before any AI explanation is generated.
 
 ---
 
@@ -36,18 +46,18 @@ Take It Right provides structured risk analysis using deterministic rules before
 
 ### Deterministic Safety Engine (Core Logic)
 
-The backend is rule-driven and does **not rely on AI for medical decisions**.
+The backend is rule-driven and does **not rely on AI for medical decision-making**.
 
 It evaluates:
 
 * Dose limits
 * mg/kg thresholds
-* Time spacing
+* Time spacing validation
 * Drug interactions
 * Contraindications
 * Organ stress scoring
 
-AI is only used to convert structured results into readable explanations.
+The AI layer is strictly explanatory. It does not influence risk classification.
 
 ---
 
@@ -63,11 +73,11 @@ The deterministic engine includes:
 * Brand → ingredient expansion (e.g., Crocin → Paracetamol)
 * Hidden duplicate ingredient detection
 * NSAID stacking detection
-* Alcohol interaction escalation (automatic HIGH RISK)
+* Alcohol interaction escalation (automatic HIGH RISK override)
 * Liver, Kidney, and Stomach load scoring
 * Conflict deduplication with severity prioritization
-* Deterministic HIGH RISK override for critical conditions
-* Structured guidance generation
+* Deterministic HIGH RISK override for critical violations
+* Structured, context-aware guidance generation
 
 ---
 
@@ -85,7 +95,7 @@ The system produces:
 * Structured conflicts
 * Actionable guidance
 
-Critical violations automatically override scoring logic.
+Critical violations override numeric scoring to ensure safety-first logic.
 
 ---
 
@@ -128,46 +138,42 @@ Built with:
 
 # Tech Stack
 
-**Backend**
+## Backend
 
 * Python
 * Flask
-* Custom rule engine
-* JSON configuration for medication rules
+* Custom deterministic rule engine
+* JSON-configured medication rules
 
-**Frontend**
+## Frontend
 
 * React
 * Vite
 * Plotly.js
-* CSS-based design tokens
+* CSS design tokens
 
-**AI Layer**
+## AI Layer
 
-* Optional explanation generator
-* Converts deterministic output into human-readable language
-* Does not influence risk calculation
+* Explanation generator
+* Converts structured engine output into human-readable interpretation
+* Does not affect risk computation
 
 ---
 
 # Local Setup
 
-## Backend Setup
+## Backend
 
 ```bash
-# Clone repository
-git clone https://github.com/your-username/take_it_right.git
+git clone https://github.com/saravanapriyaa21/take_it_right.git
 cd take_it_right
 
-# Create virtual environment
 python -m venv venv
-source venv/bin/activate  # macOS/Linux
-# venv\Scripts\activate   # Windows
+source venv/bin/activate   # macOS/Linux
+# venv\Scripts\activate    # Windows
 
-# Install dependencies
 pip install -r requirements.txt
 
-# Run backend
 python -m api.app
 ```
 
@@ -179,7 +185,7 @@ http://127.0.0.1:5050
 
 ---
 
-## Frontend Setup
+## Frontend
 
 ```bash
 cd frontend
@@ -205,17 +211,19 @@ take_it_right/
 ├── api/               # Flask API
 ├── ai/                # Explanation generator
 ├── frontend/          # React dashboard
-├── test_engine.py     # Engine test scenarios
+├── test_engine.py     # Engine validation scenarios
 ├── requirements.txt
 └── README.md
 ```
 
 ---
+
 ## Key Design Philosophy
 
-- Deterministic before generative
-- Explicit safety overrides over probabilistic inference
-- Transparent risk scoring
+* Deterministic before generative
+* Explicit safety overrides over probabilistic inference
+* Transparent and auditable risk scoring
+* Separation of decision logic and explanation layer
 
 ---
 
