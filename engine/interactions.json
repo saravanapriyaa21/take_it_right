@@ -1,0 +1,50 @@
+[
+  {
+    "drugA": "paracetamol",
+    "drugB": "alcohol",
+    "risk": "liver stress",
+    "severity": 4
+  },
+  {
+    "drugA": "ibuprofen",
+    "drugB": "aspirin",
+    "risk": "bleeding",
+    "severity": 3
+  },
+  {
+    "drugA": "naproxen",
+    "drugB": "aspirin",
+    "risk": "bleeding",
+    "severity": 3
+  },
+  {
+    "drugA": "diclofenac",
+    "drugB": "aspirin",
+    "risk": "bleeding",
+    "severity": 3
+  },
+  {
+    "drugA": "ibuprofen",
+    "drugB": "naproxen",
+    "risk": "stomach irritation",
+    "severity": 3
+  },
+  {
+    "drugA": "ibuprofen",
+    "drugB": "diclofenac",
+    "risk": "stomach irritation",
+    "severity": 3
+  },
+  {
+    "drugA": "diphenhydramine",
+    "drugB": "alcohol",
+    "risk": "excessive drowsiness",
+    "severity": 3
+  },
+  {
+    "drugA": "dextromethorphan",
+    "drugB": "alcohol",
+    "risk": "sedation",
+    "severity": 3
+  }
+]

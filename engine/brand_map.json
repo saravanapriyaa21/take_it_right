@@ -1,0 +1,35 @@
+{
+  "crocin": ["paracetamol"],
+  "dolo_650": ["paracetamol"],
+  "calpol": ["paracetamol"],
+  "saridon": ["paracetamol"],
+  
+  "combiflam": ["paracetamol", "ibuprofen"],
+  "brufen": ["ibuprofen"],
+  "ibugesic": ["ibuprofen"],
+  
+  "benadryl": ["diphenhydramine"],
+  "corex": ["dextromethorphan"],
+  "alex": ["dextromethorphan"],
+  "vicks_action_500": ["paracetamol", "phenylephrine", "caffeine"],
+  "honitus": ["cough_herbal"],
+  
+  "gelusil": ["antacid"],
+  "digene": ["antacid"],
+  "eno": ["antacid"],
+  "omez": ["omeprazole"],
+  
+  "metformin": ["metformin"],
+  "glycomet": ["metformin"],
+  
+  "atorva": ["atorvastatin"],
+  "lipitor": ["atorvastatin"],
+  
+  "amlopress": ["amlodipine"],
+  "amlong": ["amlodipine"],
+  
+  "coffee": ["caffeine"],
+  "beer": ["alcohol"],
+  "wine": ["alcohol"],
+  "whisky": ["alcohol"]
+}

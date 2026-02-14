@@ -1,0 +1,155 @@
+{
+  "paracetamol": {
+    "max_daily_dose": 4000,
+    "single_dose_limit": 1000,
+    "min_spacing_hours": 4,
+    "liver_load": 2,
+    "stomach_risk": 1,
+    "kidney_load": 0,
+    "contraindications": {
+      "liver_disease": true
+    }
+  },
+  "ibuprofen": {
+    "max_daily_dose": 1200,
+    "single_dose_limit": 400,
+    "min_spacing_hours": 6,
+    "liver_load": 1,
+    "stomach_risk": 3,
+    "kidney_load": 2,
+    "contraindications": {
+      "pregnancy": true,
+      "ulcer_history": true,
+      "kidney_disease": true,
+      "min_age": 6
+    }
+  },
+  "aspirin": {
+    "max_daily_dose": 4000,
+    "single_dose_limit": 1000,
+    "min_spacing_hours": 4,
+    "liver_load": 1,
+    "stomach_risk": 4,
+    "kidney_load": 2,
+    "contraindications": {
+      "pregnancy": true,
+      "ulcer_history": true,
+      "min_age": 12
+    }
+  },
+  "naproxen": {
+    "max_daily_dose": 1000,
+    "single_dose_limit": 500,
+    "min_spacing_hours": 8,
+    "liver_load": 1,
+    "stomach_risk": 3,
+    "kidney_load": 2,
+    "contraindications": {
+      "pregnancy": true,
+      "ulcer_history": true,
+      "kidney_disease": true
+    }
+  },
+  "diclofenac": {
+    "max_daily_dose": 150,
+    "single_dose_limit": 75,
+    "min_spacing_hours": 8,
+    "liver_load": 2,
+    "stomach_risk": 3,
+    "kidney_load": 2,
+    "contraindications": {
+      "pregnancy": true,
+      "heart_disease": true,
+      "ulcer_history": true,
+      "kidney_disease": true
+    }
+  },
+  "cetirizine": {
+    "max_daily_dose": 10,
+    "single_dose_limit": 10,
+    "min_spacing_hours": 24,
+    "liver_load": 0,
+    "stomach_risk": 0,
+    "kidney_load": 0,
+    "contraindications": {
+      "kidney_disease": true
+    }
+  },
+  "diphenhydramine": {
+    "max_daily_dose": 300,
+    "single_dose_limit": 50,
+    "min_spacing_hours": 6,
+    "liver_load": 1,
+    "stomach_risk": 1,
+    "kidney_load": 0,
+    "contraindications": {
+      "glaucoma": true,
+      "elderly": true
+    }
+  },
+  "dextromethorphan": {
+    "max_daily_dose": 120,
+    "single_dose_limit": 30,
+    "min_spacing_hours": 6,
+    "liver_load": 1,
+    "stomach_risk": 1,
+    "kidney_load": 0,
+    "contraindications": {
+      "maoi_use": true
+    }
+  },
+  "phenylephrine": {
+    "max_daily_dose": 60,
+    "single_dose_limit": 10,
+    "min_spacing_hours": 4,
+    "liver_load": 0,
+    "stomach_risk": 0,
+    "kidney_load": 0,
+    "contraindications": {
+      "hypertension": true,
+      "heart_disease": true
+    }
+  },
+  "omeprazole": {
+    "max_daily_dose": 40,
+    "single_dose_limit": 20,
+    "min_spacing_hours": 24,
+    "liver_load": 1,
+    "stomach_risk": 0,
+    "kidney_load": 0,
+    "contraindications": {}
+  },
+  "antacid": {
+    "max_daily_dose": 8000,
+    "single_dose_limit": 2000,
+    "min_spacing_hours": 2,
+    "liver_load": 0,
+    "stomach_risk": 0,
+    "kidney_load": 0,
+    "contraindications": {
+      "kidney_disease": true
+    }
+  },
+  "caffeine": {
+    "max_daily_dose": 400,
+    "single_dose_limit": 200,
+    "min_spacing_hours": 4,
+    "liver_load": 0,
+    "stomach_risk": 1,
+    "kidney_load": 1,
+    "contraindications": {
+      "anxiety_disorder": true
+    }
+  },
+  "alcohol": {
+    "max_daily_dose": 100,
+    "single_dose_limit": 50,
+    "min_spacing_hours": 4,
+    "liver_load": 3,
+    "stomach_risk": 2,
+    "kidney_load": 1,
+    "contraindications": {
+      "liver_disease": true
+    }
+  }
+}
