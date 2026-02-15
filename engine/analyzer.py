@@ -338,26 +338,54 @@ def analyze(input_data):
 
     # ---------------- Duplicate Ingredient ----------------
 
-    med_counts = Counter(expanded_all)
+    # Collect both name and ingredients to detect "hidden" ones
+    all_pairs = []
+    for med in [medicine] + other_meds:
+        ingredients = expand(med)
+        for ing in ingredients:
+            all_pairs.append({"name": med, "ingredient": ing})
 
-    duplicate_stacking = any(
-        count > 1 and med in rules
-        for med, count in med_counts.items()
-    )
+    if alcohol:
+        all_pairs.append({"name": "alcohol", "ingredient": "alcohol"})
 
-    if duplicate_stacking:
-        # Force HIGH RISK for paracetamol duplicates
-        if any(med == "paracetamol" and med_counts[med] > 1 for med in med_counts):
-            absolute_block = True
-            conflicts.append({
-                "risk": "Critical: Hidden duplicate paracetamol detected across brands",
-                "severity": 10
-            })
+    # Count ingredient occurrences
+    ing_counts = Counter(p["ingredient"] for p in all_pairs)
+
+    duplicate_ingredients = [ing for ing, count in ing_counts.items() if count > 1 and ing in rules]
+
+    for ing in duplicate_ingredients:
+        # Check if the names used are different
+        names_for_this_ing = set(p["name"] for p in all_pairs if p["ingredient"] == ing)
+        
+        if len(names_for_this_ing) > 1:
+            # Different names = Hidden Duplicate
+            if ing == "paracetamol":
+                absolute_block = True
+                conflicts.append({
+                    "risk": "Critical: Hidden duplicate paracetamol detected across brands",
+                    "severity": 10
+                })
+            else:
+                conflicts.append({
+                    "risk": f"Hidden duplicate {ing} detected across different brands",
+                    "severity": 7
+                })
         else:
-            conflicts.append({
-                "risk": "Duplicate ingredient detected",
-                "severity": 5
-            })
+            # Same name used multiple times
+            if ing == "paracetamol":
+                # For same-name paracetamol, we don't absolute block (overdose handles it)
+                # but we still warn.
+                conflicts.append({
+                    "risk": "Multiple doses of paracetamol detected",
+                    "severity": 2
+                })
+            else:
+                conflicts.append({
+                    "risk": f"Multiple doses of {ing} detected",
+                    "severity": 2
+                })
+
+    duplicate_stacking = len(duplicate_ingredients) > 0
 
     # ---------------- Organ Load ----------------
 
