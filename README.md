@@ -20,7 +20,7 @@ The system prioritizes clarity, explicit safety rules, and deterministic overrid
 
 Try the deployed application here:
 
-👉 **[https://your-render-url.onrender.com](https://your-render-url.onrender.com)**
+👉 **https://take-it-right.onrender.com**
 
 ⚠️ Note: If hosted on a free tier, the backend may take a few seconds to wake up after inactivity.
 
